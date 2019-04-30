@@ -1,0 +1,19 @@
+Select * from T
+------------------
+| Name   |  Father|
+------------------
+|  A     |    B   |
+------------------
+|  B     |    C  |
+------------------
+|  D   |    B   |
+------------------
+|  E    |    G |
+------------------
+|  G    |    M   |
+------------------
+|  N     |    M   |
+
+//Grandfather result
+Select T2.Name as GrandSon, T1.Father as GrandFather from T 
+as T1 join T as T2 on T1.Name = T2.Father
